@@ -1,5 +1,10 @@
 import type { GatsbyConfig } from "gatsby"
 
+const dotenv = require('dotenv');
+dotenv.config({
+  path: ".env"
+});
+
 const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
@@ -8,7 +13,22 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-image', 
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: "GitHub",
+        fieldName: "github",
+        url: "https://api.github.com/graphql", // default Github GraphQL v4 API endpoint
+        headers: {
+          Authorization: `Bearer ${ process.env.GITHUB_PERSONAL_ACCESS_TOKEN }`
+        }
+      }
+    }
+  ],
 }
 
 export default config
