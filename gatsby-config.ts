@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-image', 
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-graphql`,
       options: {
@@ -26,6 +27,13 @@ const config: GatsbyConfig = {
         headers: {
           Authorization: `Bearer ${ process.env.GITHUB_PERSONAL_ACCESS_TOKEN }`
         }
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${ __dirname }/src/images/`
       }
     }
   ],

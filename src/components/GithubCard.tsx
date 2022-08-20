@@ -18,11 +18,11 @@ export default function GithubCard({ pinnedRepository }: any) {
     }, [])
 
     return (
-        <div ref={currentRef} className='w-full col-span-1 shadow-lg rounded-xl bg-white bg-opacity-10 flex border-white border-t border-l backdrop-blur overflow-hidden cursor-pointer'>
+        <div ref={currentRef} className='w-full col-span-1 shadow-lg rounded-xl bg-white bg-opacity-10 flex border-white dark:border-gray-600 border-t border-l backdrop-blur overflow-hidden cursor-pointer'>
             <div className='content p-4 flex flex-col justify-between gap-3 w-full'>
                 <div className='flex flex-col gap-1'>
                     <h2 className='flex flex-row gap-2 items-center'>
-                        <p className='text-lg font-semibold text-indigo-500 dark:text-gray-100'>{pinnedRepository.owner.login === "ferdinand066"
+                        <p className='text-lg font-semibold text-blue-500 dark:text-gray-900'>{pinnedRepository.owner.login === "ferdinand066"
                             ? pinnedRepository.name : pinnedRepository.nameWithOwner}</p>
                         <p className='text-xs rounded-full py-0.5 px-2.5 border text-gray-700 dark:text-gray-300'>{pinnedRepository.isPrivate ? "Private" : "Public"}</p>
                     </h2>
