@@ -48,8 +48,8 @@ const IndexPage = () => {
           <Navbar />
           <div className="flex flex-col gap-20">
             <PersonalInformation />
-            {/* <SkillSection />
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col gap-4">
+            <SkillSection />
+            {/* <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col gap-4">
               <GithubRepositories pinnedRepositories={data.github.user.pinnedItems.nodes} />
             </div> */}
           </div>
