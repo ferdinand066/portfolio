@@ -3,13 +3,14 @@ import { MenuIcon, MoonIcon, SunIcon, XIcon } from '@heroicons/react/outline'
 import * as React from "react"
 import { useRecoilState } from 'recoil'
 import { activeMenu as activeMenuAtom, theme as themeAtom } from '../utils/atoms'
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 function classNames(...classes: any[]) {
     return classes.filter(Boolean).join(' ')
 }
 
 const menuList = [
-    "About Me", "Experiences", "Skills", "Certificates", "Projects"
+    "About Me", "Skills", "Experiences", "Certificates", "Projects"
 ]
 
 export default function Navbar() {
@@ -23,6 +24,7 @@ export default function Navbar() {
 
     function changeActiveMenu(newActiveMenu: string) {
         setActiveMenu(newActiveMenu);
+        scrollTo("#" + newActiveMenu.replace(" ", "-").toLowerCase());
     }
 
     return (
@@ -33,8 +35,7 @@ export default function Navbar() {
                         <div className="flex justify-between h-16">
                             <div className="-mr-2 flex items-center sm:hidden">
                                 {/* Mobile menu button */}
-                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-dark-700 dark:text-gray-600 
-                                    hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-white
+                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-dark-700 dark:text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-white
                                     ">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
@@ -53,19 +54,18 @@ export default function Navbar() {
                                     {
                                         menuList.map(menu => {
                                             return (
-                                                <a
+                                                <div
                                                     key={menu}
-                                                    href={"#" + menu.replace(" ", "-").toLowerCase()}
                                                     className={
                                                         (menu === activeMenu ?
                                                             "border-blue-500 text-gray-900 dark:bg-gray-900 dark:text-white" :
                                                             "border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white")
-                                                        + " inline-flex items-center px-3 pt-1 border-b-2 text-sm font-medium dark:my-3 dark:rounded dark:border-none"
+                                                        + " cursor-pointer inline-flex items-center px-3 pt-1 border-b-2 text-sm font-medium dark:my-3 dark:rounded dark:border-none"
                                                     }
                                                     onClick={(e) => changeActiveMenu(menu)}
                                                 >
                                                     {menu}
-                                                </a>
+                                                </div>
                                             )
                                         })
                                     }
@@ -87,19 +87,18 @@ export default function Navbar() {
                             {
                                 menuList.map(menu => {
                                     return (
-                                        <a
+                                        <div
                                             key={menu}
-                                            href={"#" + menu.replace(" ", "-").toLowerCase()}
                                             className={
                                                 (menu === activeMenu ?
                                                     "bg-blue-50 border-blue-500 text-blue-700 dark:bg-gray-900 dark:text-white" :
                                                     "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white")
-                                                + " block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:px-3 dark:rounded-md dark:border-none"
+                                                + " cursor-pointer block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:px-3 dark:rounded-md dark:border-none"
                                             }
                                             onClick={(e) => changeActiveMenu(menu)}
                                         >
                                             {menu}
-                                        </a>
+                                        </div>
                                     )
                                 })
                             }

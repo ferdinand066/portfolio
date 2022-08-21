@@ -5,23 +5,18 @@ export default function PersonalInformation() {
     return (
         <div className="relative py-16">
             <div className="hidden absolute top-0 inset-x-0 h-1/2 bg-gray-50 dark:bg-gray-600 lg:block" aria-hidden="true" />
-            <div className="max-w-7xl mx-auto bg-blue-600 lg:bg-transparent lg:px-8">
+            <div className="max-w-7xl mx-auto bg-blue-600 dark:bg-gray-900 lg:bg-transparent dark:lg:bg-transparent lg:px-8">
                 <div className="lg:grid lg:grid-cols-12">
                     <div className="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
-                        <div className="absolute inset-x-0 h-1/2 bg-gray-50 dark:bg-gray-300 lg:hidden" aria-hidden="true" />
+                        <div className="absolute inset-x-0 h-1/2 bg-gray-50 dark:bg-gray-600 lg:hidden" aria-hidden="true" />
                         <div className="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
                             <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
-                                {/* <img
-                                    className="object-cover object-center rounded-3xl shadow-2xl"
-                                    src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80"
-                                    alt=""
-                                /> */}
                                 <StaticImage
                                     src='../images/FerdinandGunawan.jpg'
                                     width={ 600 }
                                     alt="Ferdinand Gunawan"
                                     placeholder='dominantColor'
-                                    className='!object-cover !object-center !rounded-3xl !shadow-2xl'
+                                    className='!object-cover !object-center !rounded-3xl !shadow-2xl hover:!scale-105 !transition-all hover:!rotate-6'
                                 ></StaticImage>
                             </div>
                         </div>
@@ -79,13 +74,11 @@ export default function PersonalInformation() {
                                 <h2 className=" text-white flex flex-row gap-1.5 items-end" id="join-heading">
                                     <p className='text-lg'>Hi! I'm</p> <p className='text-3xl font-extrabold'>Ferdinand Gunawan</p>
                                 </h2>
-                                <div className='flex flex-row gap-1.5 text-lg items-end text-white'>
-                                    <p className='font-extrabold'>Database Administrator</p>
-                                    at
-                                    <p className='font-extrabold'>Bina Nusantara University</p>
+                                <div className='flex flex-row gap-1.5 text-lg text-center text-white flex-wrap'>
+                                    Database Administrator at Bina Nusantara University
                                 </div>
                             </div>
-                            <div className='flex flex-col text-lg text-white items-center lg:items-start'>
+                            <div className='flex flex-col text-lg text-white items-center lg:items-start text-center'>
                                 <p>
                                     3 years of experience in teaching programming lectures.
                                 </p>

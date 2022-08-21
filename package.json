@@ -24,6 +24,7 @@
     "gatsby": "^4.20.0",
     "gatsby-plugin-image": "^2.21.0",
     "gatsby-plugin-sharp": "^4.21.0",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^4.21.1",
     "gatsby-source-github-api": "^1.0.0",
     "gatsby-source-graphql": "^4.21.0",
