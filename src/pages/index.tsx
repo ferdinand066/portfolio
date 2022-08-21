@@ -45,14 +45,14 @@ const IndexPage = () => {
     <RecoilRoot>
       <main>
         <div className="w-full absolute flex flex-col gap-4 dark:bg-gray-600">
-          {/* <Navbar />
+          {/* <Navbar />*/}
           <div className="flex flex-col gap-20">
             <PersonalInformation />
             <SkillSection />
             <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col gap-4">
               <GithubRepositories pinnedRepositories={data.github.user.pinnedItems.nodes} />
             </div>
-          </div> */}
+          </div> 
         </div>
       </main>
     </RecoilRoot>
