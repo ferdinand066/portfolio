@@ -42,7 +42,7 @@ const features = [
     {
         name: 'Database Management',
         description:
-            'Analyze and maintain data for the purposes of college transactions.',
+            'Analyze and maintain data for the purposes of college transactions..',
         icon: <StaticImage
             src='../images/icon/SSMS.svg'
             width={400}
