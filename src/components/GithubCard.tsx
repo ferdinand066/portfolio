@@ -17,7 +17,6 @@ export default function GithubCard({ pinnedRepository }: any) {
         });
     }, [])
 
-    console.log(showFormattedDate(pinnedRepository.createdAt));
     return (
         <div ref={currentRef} className='w-full col-span-1 shadow-lg rounded-xl bg-white bg-opacity-10 flex border-white dark:border-gray-600 border-t border-l backdrop-blur overflow-hidden cursor-pointer'>
             <div className='content p-4 flex flex-col justify-between gap-3 w-full'>
@@ -53,7 +52,7 @@ export default function GithubCard({ pinnedRepository }: any) {
                             })
                         }
                     </div>
-                    {/* <div className='flex flex-row justify-end dark:text-gray-300 text-xs'>{showFormattedDate(pinnedRepository.createdAt)}</div> */}
+                    <div className='flex flex-row justify-end dark:text-gray-300 text-xs'>{showFormattedDate(pinnedRepository.createdAt)}</div>
                 </div>
             </div>
         </div>

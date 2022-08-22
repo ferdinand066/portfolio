@@ -14,9 +14,8 @@ function showFormattedDate(date: string) {
         year: "numeric",
         month: "long",
         day: "numeric"
-    });
+    }).toString();
 
-    console.log(newDate);
     return newDate;
 }
 
