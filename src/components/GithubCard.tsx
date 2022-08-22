@@ -4,6 +4,7 @@ import { isLight, showFormattedDate } from '../utils/functions';
 
 export default function GithubCard({ pinnedRepository }: any) {
     const currentRef = React.useRef(null);
+    const [date, setDate] = React.useState('');
     React.useEffect(() => {
         VanillaTilt.init(currentRef.current!, {
             max: 25,
@@ -15,6 +16,8 @@ export default function GithubCard({ pinnedRepository }: any) {
             scale: 1.1,
             perspective: 2000
         });
+
+        setDate(showFormattedDate(pinnedRepository.createdAt));
     }, [])
 
     return (
@@ -52,7 +55,7 @@ export default function GithubCard({ pinnedRepository }: any) {
                             })
                         }
                     </div>
-                    <div className='flex flex-row justify-end dark:text-gray-300 text-xs'>{showFormattedDate(pinnedRepository.createdAt)}</div>
+                    <div className='flex flex-row justify-end dark:text-gray-300 text-xs'>{ date }</div>
                 </div>
             </div>
         </div>
