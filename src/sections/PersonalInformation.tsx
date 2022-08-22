@@ -8,9 +8,9 @@ export default function PersonalInformation() {
             <div className="max-w-7xl mx-auto bg-blue-600 dark:bg-gray-900 lg:bg-transparent dark:lg:bg-transparent lg:px-8">
                 <div className="lg:grid lg:grid-cols-12">
                     <div className="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
-                        <div className="absolute inset-x-0 h-1/2 bg-gray-50 dark:bg-gray-600 lg:hidden" aria-hidden="true" />
+                        <div className="absolute inset-x-0 h-1/2 -top-1 bg-gray-50 dark:bg-gray-600 lg:hidden" aria-hidden="true" />
                         <div className="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
-                            <div className="aspect-w-10 aspect-h-6 sm:!aspect-w-2 sm:aspect-h-1 lg:!aspect-w-1">
+                            <div className="!aspect-w-10 aspect-h-6 sm:!aspect-w-2 sm:aspect-h-1 lg:!aspect-w-1">
                                 <StaticImage
                                     src='../images/FerdinandGunawan.jpg'
                                     width={ 600 }
@@ -71,7 +71,7 @@ export default function PersonalInformation() {
                         </div>
                         <div className="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
                             <div className='flex flex-col gap-1 items-center lg:items-start'>
-                                <h2 className=" text-white flex flex-row gap-1.5 items-end" id="join-heading">
+                                <h2 className=" text-white flex flex-col sm:flex-row gap-1.5 text-center sm:items-end sm:text-start" id="join-heading">
                                     <p className='text-lg'>Hi! I'm</p> <p className='text-3xl font-extrabold'>Ferdinand Gunawan</p>
                                 </h2>
                                 <div className='flex flex-row gap-1.5 text-lg text-center text-white flex-wrap'>
