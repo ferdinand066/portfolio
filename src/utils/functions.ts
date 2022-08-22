@@ -7,13 +7,17 @@ function isLight(color: string) {
     return brightness > 155;
 }
 
-// function showFormattedDate(date: string) {
-//     return new Date(date).toLocaleDateString("en-EN", {
-//         weekday: "long",
-//         year: "numeric",
-//         month: "long",
-//         day: "numeric"
-//     });
-// }
+function showFormattedDate(date: string) {
+    const newDate = new Date(date)
+    newDate.setDate(newDate.getTime() + newDate.getTimezoneOffset() * 60 *1000 );
+    console.log(newDate);
+    return newDate;
+    // .toLocaleDateString("en-EN", {
+    //     weekday: "long",
+    //     year: "numeric",
+    //     month: "long",
+    //     day: "numeric"
+    // });
+}
 
-export { isLight }
+export { isLight, showFormattedDate }
