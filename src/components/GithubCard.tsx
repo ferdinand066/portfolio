@@ -1,6 +1,6 @@
 import * as React from 'react'
 import VanillaTilt from 'vanilla-tilt';
-import { isLight, showFormattedDate } from '../utils/functions';
+import { isLight } from '../utils/functions';
 
 export default function GithubCard({ pinnedRepository }: any) {
     const currentRef = React.useRef(null);
@@ -52,7 +52,7 @@ export default function GithubCard({ pinnedRepository }: any) {
                             })
                         }
                     </div>
-                    <div className='flex flex-row justify-end dark:text-gray-300 text-xs'>{showFormattedDate(pinnedRepository.createdAt)}</div>
+                    {/* <div className='flex flex-row justify-end dark:text-gray-300 text-xs'>{showFormattedDate(pinnedRepository.createdAt)}</div> */}
                 </div>
             </div>
         </div>

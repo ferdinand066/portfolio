@@ -7,13 +7,13 @@ function isLight(color: string) {
     return brightness > 155;
 }
 
-function showFormattedDate(date: string) {
-    return new Date(date).toLocaleDateString("en-EN", {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-    });
-}
+// function showFormattedDate(date: string) {
+//     return new Date(date).toLocaleDateString("en-EN", {
+//         weekday: "long",
+//         year: "numeric",
+//         month: "long",
+//         day: "numeric"
+//     });
+// }
 
-export { isLight, showFormattedDate }
+export { isLight }
