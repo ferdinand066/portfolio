@@ -8,7 +8,6 @@ function isLight(color: string) {
 }
 
 function showFormattedDate(date: string) {
-    console.log(date)
     const newDate = new Date(date).toLocaleDateString("en-EN", {
         weekday: "long",
         year: "numeric",
